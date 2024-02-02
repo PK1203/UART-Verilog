@@ -1,17 +1,3 @@
-// AstroTinker Bot : Task 2A : UART Transmitter
-/*
-Instructions
--------------------
-Students are not allowed to make any changes in the Module declaration.
-
-This file is used to generate UART Tx data packet to transmit the messages based on the input data.
-
-Recommended Quartus Version : 20.1
-The submitted project file must be 20.1 compatible as the evaluation will be done on Quartus Prime Lite 20.1.
-
-Warning: The error due to compatibility will not be entertained.
--------------------
-*/
 
 /*
 Module UART Transmitter
@@ -28,13 +14,11 @@ module uart_tx(
     output reg tx
 );
 
-//////////////////DO NOT MAKE ANY CHANGES ABOVE THIS LINE//////////////////
 
 initial begin
 	 tx = 0;
 end
 
-////////// Add your code here ///////////////////
 
 reg[1:0] state=2'b01;
 reg[24:0] counter=0;
@@ -80,7 +64,5 @@ always @(posedge clk_50M) begin
 		end
 	endcase
 end
-
-//////////////////DO NOT MAKE ANY CHANGES BELOW THIS LINE//////////////////
 
 endmodule
